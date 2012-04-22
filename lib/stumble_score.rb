@@ -67,12 +67,12 @@ module StumbleScore
     end
 
     def ask_the_google(uri)
-      http          = Net::HTTP.new(uri.host, uri.port)
-      http.use_ssl  = true
-      http.verify_mode  = OpenSSL::SSL::VERIFY_NONE
-      request       = Net::HTTP::Get.new(uri.request_uri)
-      response      = http.request(request)
-      json          = response.body
+      session              = Net::HTTP.new(uri.host, uri.port)
+      session.use_ssl      = true
+      session.verify_mode  = OpenSSL::SSL::VERIFY_NONE
+      request              = Net::HTTP::Get.new(uri.request_uri)
+      response             = session.request(request)
+      json                 = response.body
       JSON.parse(json)
     end
 
