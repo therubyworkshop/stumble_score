@@ -1,3 +1,7 @@
+# Install
+
+    gem install json_pure
+
 # Running the CLI
 
     cd /path/to/stumble_score/
