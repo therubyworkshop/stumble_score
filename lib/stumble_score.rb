@@ -1,5 +1,5 @@
-require "net/http"
 require "rubygems"
+require "net/https"
 require "uri"
 require "json"
 
