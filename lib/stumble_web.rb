@@ -7,6 +7,7 @@ get '/' do
   if address && address.length > 1
     location        = StumbleScore::Location.new(address)
     bar_count       = location.bar_count
+    classification  = location.classification
     "<!doctype html>
     <html>
     <head></head>
@@ -14,6 +15,7 @@ get '/' do
       <h1>Welcome to StumbleScore!</h1>
       <p>Calculating stumble score for #{address}.</p>
       <p>Bar count: #{bar_count}</p>
+      <p>Classified as: #{classification}</p>
     </body>
     </html>"
   else
