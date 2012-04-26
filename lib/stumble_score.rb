@@ -13,9 +13,11 @@ module StumbleScore
         bar_count       = location.bar_count
         score           = location.score
         classification  = location.classification
+        bar_names       = location.bar_names
         "Welcome to StumbleScore!\n" \
         "Calculating stumble score for \"#{address}\".\n" \
-        "Bars nearby: #{bar_count}\n" \
+        "Bar count: #{bar_count}\n" \
+        "Bars nearby: #{bar_names}\n" \
         "Classified as: #{classification}\n" \
         "StumbleScore: #{location.score}"
       else
@@ -52,7 +54,15 @@ module StumbleScore
       end
     end
 
+    def bar_names
+      self.bars.map{|bar| bar["name"] }.join(", ")
+    end
+
     def bar_count
+      self.bars.length
+    end
+
+    def bars
       uri = URI::HTTPS.build({
         :host  => "maps.googleapis.com",
         :path  => "/maps/api/place/search/json",
@@ -63,7 +73,7 @@ module StumbleScore
                   "key=#{GOOGLE_KEY}"
       })
       parsed = self.ask_the_google(uri)
-      parsed["results"].length
+      parsed["results"]
     end
 
     def geocode

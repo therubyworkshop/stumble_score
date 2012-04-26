@@ -5,15 +5,15 @@ class TestCLI < Test::Unit::TestCase
 
   def test_cli_displays_number_of_bars_near_specified_address
     output = StumbleScore::CLI.run(CHESTNUT_HILL)
-    assert output.include?("Bars nearby: #{CHESTNUT_HILL_BAR_COUNT}"),
+    assert output.include?("Bar count: #{CHESTNUT_HILL_BAR_COUNT}"),
       "TODO display number of bars in CLI for specified address."
 
     output = StumbleScore::CLI.run(PAOLI)
-    assert output.include?("Bars nearby: #{PAOLI_BAR_COUNT}"),
+    assert output.include?("Bar count: #{PAOLI_BAR_COUNT}"),
       "That's odd. The specified number of bars works for one address but not another."
 
     output = StumbleScore::CLI.run(RITTENHOUSE)
-    assert output.include?("Bars nearby: #{RITTENHOUSE_BAR_COUNT}"),
+    assert output.include?("Bar count: #{RITTENHOUSE_BAR_COUNT}"),
       "That's odd. The specified number of bars works in two addresses but not a third."
   end
 
