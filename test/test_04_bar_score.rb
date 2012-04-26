@@ -1,14 +1,5 @@
 require File.expand_path(File.join('..', 'test_helper'), __FILE__)
 
-module LocationFixtures
-  CHESTNUT_HILL           = "19118"
-  CHESTNUT_HILL_BAR_COUNT = 10
-  PAOLI                   = "19301"
-  PAOLI_BAR_COUNT         = 5
-  RITTENHOUSE             = "19103"
-  RITTENHOUSE_BAR_COUNT   = 20
-end
-
 class TestCLI < Test::Unit::TestCase
   include LocationFixtures
 
