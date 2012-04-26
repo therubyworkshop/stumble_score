@@ -9,12 +9,14 @@ module StumbleScore
 
     def self.run(address="")
       if address.length > 1
-        location  = Location.new(address)
-        bar_count = location.bar_count
-        score     = location.score
+        location        = Location.new(address)
+        bar_count       = location.bar_count
+        score           = location.score
+        classification  = location.classification
         "Welcome to StumbleScore!\n" \
         "Calculating stumble score for \"#{address}\".\n" \
         "Bars nearby: #{bar_count}\n" \
+        "Classified as: #{classification}\n" \
         "StumbleScore: #{location.score}"
       else
         "Usage: stumble_score <location> \n" \
@@ -37,6 +39,17 @@ module StumbleScore
 
     def initialize(address)
       @address = address
+    end
+
+    def classification
+      case self.score.to_i
+      when 0..33
+        "Dry"
+      when 34..66
+        "Tipsy"
+      when 76..100
+        "Sloppy"
+      end
     end
 
     def bar_count
