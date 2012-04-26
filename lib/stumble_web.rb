@@ -14,6 +14,7 @@ get '/' do
   <head></head>
   <body>
     <h1>Welcome to StumbleScore!</h1>
+    <p>Calculating stumble score for #{address}.</p>
   </body>
   </html>"
 end
