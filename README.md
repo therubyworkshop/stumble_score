@@ -11,6 +11,7 @@
 
     $ cd /path/to/stumble_score/
     $ ruby test/test_01_greeting.rb
+    $ rake test # to run them all at once
 
 # Running the web app locally
 
@@ -38,6 +39,7 @@
 + Extra credit: Optional user specified radius
 + Extra credit: Exception handling
 + Extra credit: Form field
++ Extra credit: Non-linear score
 + Test on Windows
 
 # TODO planning
