@@ -18,7 +18,9 @@ Exercises for The Ruby Workshop
 
 One at a time
 
-    ruby test/test_01_greeting.rb
+    ruby test/test_01_cli_greeting.rb
+    ruby test/test_02_cli_address.rb
+    ...
 
 All at once
 
