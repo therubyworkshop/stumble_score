@@ -1,6 +1,6 @@
 # Install
 
-    gem install json_pure
+    gem install json_pure sinatra heroku rack-test
 
 # Running the CLI
 
