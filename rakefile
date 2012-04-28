@@ -1,0 +1,10 @@
+require 'rake/testtask'
+
+# $ rake test                           # run tests normally
+# $ rake test TEST=just_one_file.rb     # run just one test file.
+
+Rake::TestTask.new do |t|
+  t.libs << "test"
+  t.test_files = FileList['test/test*.rb']
+  t.verbose = true
+end
