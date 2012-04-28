@@ -20,7 +20,7 @@ module StumbleScore
     end
 
     def score
-      0
+      100.0 * self.bar_count.to_f / MAGIC_NUMBER
     end
 
     def classification
