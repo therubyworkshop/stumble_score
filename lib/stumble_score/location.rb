@@ -12,11 +12,11 @@ module StumbleScore
     MAGIC_NUMBER  = 20
 
     def initialize(address)
-      # TODO
+      @address = address
     end
 
     def bar_count
-      # TODO
+      self.bars.length
     end
 
     def score
