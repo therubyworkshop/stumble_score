@@ -53,8 +53,15 @@ Visit [http://localhost:4567/?address=rittenhouse%20square,%20pa](http://localho
 5. (If you don't have git installed, install the Toolbelt)
 6. `gem install heroku`
 7. `heroku login`
-8. `heroku create --stack cedar`
-9. `git push heroku master`
-10. Visit goofy URL
-11. Profit
+8. `git init`
+9. `heroku create --stack cedar
+10. `git commit -a -m 'My web app'`
+11. `git push heroku master`
+12. Visit goofy URL
+13. Profit
 
+# Make a change and re-deploy
+
+1. Hack
+2. `git commit -a -m 'My web app'`
+3. `git push heroku master`
