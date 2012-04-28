@@ -7,7 +7,7 @@ class TestCLI < Test::Unit::TestCase
     cli_output = CLI.run(address)
     assert cli_output.include?(address),
       "TODO display specified address in CLI. " \
-      "(HINT: look at the run() method in stumble_score.rb)"
+      "(HINT: look at the run() method in cli.rb)"
   end
 
 end

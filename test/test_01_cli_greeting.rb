@@ -6,7 +6,7 @@ class TestCLI < Test::Unit::TestCase
     cli_output = CLI.run("Philadelphia, PA")
     assert_match /Welcome to StumbleScore/i, cli_output,
       "TODO Add a nice greeting to our CLI. " \
-      "(HINT: look at the run() method in stumble_score.rb)"
+      "(HINT: look at the run() method in cli.rb)"
   end
 
 end
