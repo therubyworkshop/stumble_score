@@ -1,22 +1,37 @@
 # Install
 
-    gem install json_pure sinatra heroku rack-test
+    $ gem install json_pure sinatra heroku rack-test
 
 # Running the CLI
 
-    cd /path/to/stumble_score/
-    ./bin/stumble_score 1 Penn Square Philadelphia, PA 19107
+    $ cd /path/to/stumble_score/
+    $ ./bin/stumble_score 1 Penn Square Philadelphia, PA 19107
 
 # Running the tests
 
-    cd /path/to/stumble_score/
-    ruby test/test_01_greeting.rb
+    $ cd /path/to/stumble_score/
+    $ ruby test/test_01_greeting.rb
+
+# Running the web app locally
+
+    $ ruby lib/web.rb
+    # Visit http://localhost:4567/?address=rittenhouse%20square,%20pa
+
+# Deploy to the internets
+
+    # Sign up with heroku
+    # Visit https://api.heroku.com/signup
+    # Confirm email
+    # Create password
+    # (If you don't have git installed, install the Toolbelt)
+    $ gem install heroku
+    $ heroku login
+    $ heroku create --stack cedar
+    $ git push heroku master
+    # Visit goofy URL
 
 # TODO
 
-+ Refactor lib/stumble_score.rb
-+ Deploy to heroku
-+ Document deploy process in README
 + Memoize
 + Stub Net::HTTP
 + Code comments
@@ -28,7 +43,7 @@
 
 # TODO planning
 
-+ Finish code-samles (rename as cheatsheet)
++ Finish code-samples (rename as cheatsheet)
 + Download instructions in READMEs for stumble_score and cheatsheet
 + Set up more google API keys - Greg
 + Compile list of additional resources
