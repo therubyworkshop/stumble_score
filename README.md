@@ -14,11 +14,21 @@
 
 # TODO
 
-+ Categorize score e.g. Less than 10 is "dry town", greater than 80 is "sloppy"
-+ List bar names
-+ Web app!
-+ Display google's location name
-+ Optional user specified radius
-+ Exception handling
-+ Code comments
++ Refactor lib/stumble_score.rb
++ Deploy to heroku
++ Document deploy process in README
++ Memoize
 + Stub Net::HTTP
++ Code comments
++ Extra credit: Display google's location name
++ Extra credit: Optional user specified radius
++ Extra credit: Exception handling
++ Extra credit: Form field
++ Test on Windows
+
+# TODO planning
+
++ Finish code-samles (rename as cheatsheet)
++ Download instructions in READMEs for stumble_score and cheatsheet
++ Set up more google API keys - Greg
++ Compile list of additional resources
