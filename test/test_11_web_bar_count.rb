@@ -1,7 +1,7 @@
 require File.expand_path(File.join('..', 'test_helper'), __FILE__)
 require "rubygems"
 require 'rack/test'
-require File.expand_path(File.join('..', '..', 'lib', 'stumble_web'), __FILE__)
+require File.expand_path(File.join('..', '..', 'lib', 'web'), __FILE__)
 
 ENV['RACK_ENV'] = 'test'
 
