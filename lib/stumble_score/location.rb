@@ -69,7 +69,7 @@ module StumbleScore
       parsed               = JSON.parse(json)
 
       if parsed["status"] == "OVER_QUERY_LIMIT"
-        raise "over Google API query limit; wait or get a new GOOGLE_KEY"
+        raise "over Google API query limit; wait or get a new GOOGLE_KEY or IP address"
       end
 
       parsed
