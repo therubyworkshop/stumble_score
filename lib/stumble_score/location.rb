@@ -32,7 +32,6 @@ module StumbleScore
     end
 
     def bars
-      return @bars if @bars
       uri = URI::HTTPS.build({
         :host  => "maps.googleapis.com",
         :path  => "/maps/api/place/search/json",
@@ -43,11 +42,10 @@ module StumbleScore
                   "key=#{GOOGLE_KEY}"
       })
       parsed = self.ask_the_google(uri)
-      @bars  = parsed["results"]
+      parsed["results"]
     end
 
     def geocode
-      return @geocode if @geocode
       escaped_address = URI.escape(@address)
       uri = URI::HTTPS.build({
         :host  => "maps.googleapis.com",
@@ -57,7 +55,7 @@ module StumbleScore
       })
       parsed   = self.ask_the_google(uri)
       location = parsed["results"][0]["geometry"]["location"]
-      @geocode = "#{location["lat"]},#{location["lng"]}"
+      "#{location["lat"]},#{location["lng"]}"
     end
 
     def ask_the_google(uri)
