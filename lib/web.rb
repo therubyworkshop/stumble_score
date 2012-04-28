@@ -5,9 +5,10 @@ require File.expand_path(File.join('..', 'stumble_score'), __FILE__)
 get '/' do
   address = params[:address]
   if address && address.length > 1
-    location  = StumbleScore::Location.new(address)
-    bar_count = location.bar_count
-    score     = location.score
+    location        = StumbleScore::Location.new(address)
+    bar_count       = location.bar_count
+    classification  = location.classification
+    score           = location.score
     "<!doctype html>
     <html>
     <head></head>
@@ -15,6 +16,7 @@ get '/' do
       <h1>Welcome to StumbleScore!</h1>
       <p>Calculating stumble score for #{address}.</p>
       <p>Bar count: #{bar_count}</p>
+      <p>Classified as: #{classification}</p>
       <p>StumbleScore: #{location.score}</p>
     </body>
     </html>"
