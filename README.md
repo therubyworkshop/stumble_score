@@ -4,8 +4,13 @@ StumbleScore
 Google Keys
 ===========
 
-AIzaSyANae0s1I9yJ-sdhy1ghFAg0j4B0Po3AA4
-AIzaSyCDSMOFAhXfuZvvK8Z2uEzovnbOgsh8iBI
+    AIzaSyANae0s1I9yJ-sdhy1ghFAg0j4B0Po3AA4
+
+    AIzaSyDR7kyOHOKmbWVXV77JH1riDFe3EL67ntY
+
+    AIzaSyCDSMOFAhXfuZvvK8Z2uEzovnbOgsh8iBI
+
+    AIzaSyC5gss4v7v1MUCu4RyEWWXigta_vitTwz8
 
 
 Exercises for The Ruby Workshop
