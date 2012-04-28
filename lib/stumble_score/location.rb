@@ -46,6 +46,7 @@ module StumbleScore
     end
 
     def geocode
+      raise "@address instance variable not set!" unless @address
       escaped_address = URI.escape(@address)
       uri = URI::HTTPS.build({
         :host  => "maps.googleapis.com",
