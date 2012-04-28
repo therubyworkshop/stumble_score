@@ -1,27 +1,32 @@
 # Install
 
+    # Visit [github.com/therubyworkshop/stumble_score](http://github.com/therubyworkshop/stumble_score)
+    # Click [ZIP](https://github.com/therubyworkshop/stumble_score/zipball/master) to download project
+    # Unzip the file
+    # Rename the folder to "stumble_score" and move it where it'll be easy to find
+    # Open up your terminal
+    $ cd /path/to/stumble_score/
     $ gem install json_pure sinatra heroku rack-test
 
 # Running the CLI
 
-    $ cd /path/to/stumble_score/
     $ ./bin/stumble_score 1 Penn Square Philadelphia, PA 19107
 
 # Running the tests
 
-    $ cd /path/to/stumble_score/
     $ ruby test/test_01_greeting.rb
+    # - or -
     $ rake test # to run them all at once
 
 # Running the web app locally
 
     $ ruby lib/web.rb
-    # Visit http://localhost:4567/?address=rittenhouse%20square,%20pa
+    # Visit [http://localhost:4567/?address=rittenhouse%20square,%20pa](http://localhost:4567/?address=rittenhouse%20square,%20pa)
 
 # Deploy to the internets
 
     # Sign up with heroku
-    # Visit https://api.heroku.com/signup
+    # Visit [api.heroku.com/signup](https://api.heroku.com/signup)
     # Confirm email
     # Create password
     # (If you don't have git installed, install the Toolbelt)
