@@ -54,7 +54,7 @@ Visit [http://localhost:4567/?address=rittenhouse%20square,%20pa](http://localho
 6. `gem install heroku`
 7. `heroku login`
 8. `git init`
-9. `heroku create --stack cedar
+9. `heroku create --stack cedar`
 10. `git commit -a -m 'My web app'`
 11. `git push heroku master`
 12. Visit goofy URL
