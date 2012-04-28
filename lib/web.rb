@@ -27,6 +27,7 @@ get '/' do
     <html>
     <head></head>
     <body>
+      <h1>Welcome to StumbleScore!</h1>
       <p>An address parameter is required</p>
     </body>
     </html>"
