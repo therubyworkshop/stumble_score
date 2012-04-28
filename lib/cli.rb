@@ -8,9 +8,11 @@ class CLI
       bar_count      = location.bar_count
       classification = location.classification
       score          = location.score
+      bar_names      = location.bar_names
       "Welcome to StumbleScore!\n" \
       "Calculating stumble score for \"#{address}\".\n" \
       "Bar count: #{bar_count}\n" \
+      "Bars nearby: #{bar_names}\n" \
       "Classified as: #{classification}\n" \
       "StumbleScore: #{score}"
     else

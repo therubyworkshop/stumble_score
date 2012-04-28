@@ -35,7 +35,7 @@ module StumbleScore
     end
 
     def bar_names
-      # TODO
+      self.bars.map{|bar| bar["name"] }.join(", ")
     end
 
     def bars
