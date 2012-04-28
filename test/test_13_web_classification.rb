@@ -1,9 +1,4 @@
 require File.expand_path(File.join('..', 'test_helper'), __FILE__)
-require "rubygems"
-require 'rack/test'
-require File.expand_path(File.join('..', '..', 'lib', 'web'), __FILE__)
-
-ENV['RACK_ENV'] = 'test'
 
 class TestStumbleWeb < Test::Unit::TestCase
   include LocationFixtures

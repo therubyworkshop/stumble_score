@@ -1,5 +1,11 @@
+require "rubygems"
 require 'test/unit'
+require 'rack/test'
 require File.expand_path(File.join('..', '..', 'lib', 'stumble_score'), __FILE__)
+require File.expand_path(File.join('..', '..', 'lib', 'cli'), __FILE__)
+require File.expand_path(File.join('..', '..', 'lib', 'web'), __FILE__)
+
+ENV['RACK_ENV'] = 'test'
 
 module LocationFixtures
   CHESTNUT_HILL                 = "19118"
