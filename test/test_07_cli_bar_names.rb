@@ -4,15 +4,15 @@ class TestCLI < Test::Unit::TestCase
   include LocationFixtures
 
   def test_cli_lists_bar_names_near_specified_address
-    output = StumbleScore::CLI.run(CHESTNUT_HILL)
+    output = CLI.run(CHESTNUT_HILL)
     assert output.include?(CHESTNUT_HILL_BAR),
       "TODO list bars in CLI near specified address."
 
-    output = StumbleScore::CLI.run(PAOLI)
+    output = CLI.run(PAOLI)
     assert output.include?(PAOLI_BAR),
       "That's odd. The bar list works for one address but not another."
 
-    output = StumbleScore::CLI.run(RITTENHOUSE)
+    output = CLI.run(RITTENHOUSE)
     assert output.include?(RITTENHOUSE_BAR),
       "That's odd. The bar list works in two addresses but not a third."
   end

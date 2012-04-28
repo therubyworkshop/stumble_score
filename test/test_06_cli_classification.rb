@@ -4,15 +4,15 @@ class TestCLI < Test::Unit::TestCase
   include LocationFixtures
 
   def test_cli_displays_classification_of_specified_address
-    output = StumbleScore::CLI.run(CHESTNUT_HILL)
+    output = CLI.run(CHESTNUT_HILL)
     assert output.include?("Classified as: #{CHESTNUT_HILL_CLASSIFICATION}"),
       "TODO display classification in CLI for specified address."
 
-    output = StumbleScore::CLI.run(PAOLI)
+    output = CLI.run(PAOLI)
     assert output.include?("Classified as: #{PAOLI_CLASSIFICATION}"),
       "That's odd. The classification works for one address but not another."
 
-    output = StumbleScore::CLI.run(RITTENHOUSE)
+    output = CLI.run(RITTENHOUSE)
     assert output.include?("Classified as: #{RITTENHOUSE_CLASSIFICATION}"),
       "That's odd. The classification works in two addresses but not a third."
   end

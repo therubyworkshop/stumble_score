@@ -4,15 +4,15 @@ class TestCLI < Test::Unit::TestCase
   include LocationFixtures
 
   def test_cli_displays_stumble_score_for_specified_address
-    output = StumbleScore::CLI.run(CHESTNUT_HILL)
+    output = CLI.run(CHESTNUT_HILL)
     assert output.include?("StumbleScore: #{CHESTNUT_HILL_SCORE}"),
       "TODO display StumbleScore in CLI for specified address."
 
-    output = StumbleScore::CLI.run(PAOLI)
+    output = CLI.run(PAOLI)
     assert output.include?("StumbleScore: #{PAOLI_SCORE}"),
       "That's odd. The StumbleScore works for one address but not another."
 
-    output = StumbleScore::CLI.run(RITTENHOUSE)
+    output = CLI.run(RITTENHOUSE)
     assert output.include?("StumbleScore: #{RITTENHOUSE_SCORE}"),
       "That's odd. The StumbleScore works in two addresses but not a third."
   end
