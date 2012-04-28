@@ -11,61 +11,32 @@ module StumbleScore
     CRITERIA      = URI.escape("bar|pub")
     MAGIC_NUMBER  = 20
 
-    def score
-      # Extra credit for making this non-linear
-      100.0 * self.bar_count.to_f / MAGIC_NUMBER
+    def initialize(address)
+      # TODO
     end
 
-    def initialize(address)
-      @address = address
+    def score
+      0
     end
 
     def classification
-      case self.score.to_i
-      when 0..33
-        "Dry"
-      when 34..66
-        "Tipsy"
-      when 76..100
-        "Sloppy"
-      end
+      # TODO
     end
 
     def bar_names
-      self.bars.map{|bar| bar["name"] }.join(", ")
+      # TODO
     end
 
     def bar_count
-      self.bars.length
+      # TODO
     end
 
     def bars
-      return @bars if @bars
-      uri = URI::HTTPS.build({
-        :host  => "maps.googleapis.com",
-        :path  => "/maps/api/place/search/json",
-        :query => "location=#{self.geocode}&" \
-                  "radius=#{RADIUS}&" \
-                  "keyword=#{CRITERIA}&" \
-                  "sensor=false&" \
-                  "key=#{GOOGLE_KEY}"
-      })
-      parsed = self.ask_the_google(uri)
-      @bars  = parsed["results"]
+      # TODO
     end
 
     def geocode
-      return @geocode if @geocode
-      escaped_address = URI.escape(@address)
-      uri = URI::HTTPS.build({
-        :host  => "maps.googleapis.com",
-        :path  => "/maps/api/geocode/json",
-        :query => "address=#{escaped_address}&" \
-                  "sensor=false"
-      })
-      parsed   = self.ask_the_google(uri)
-      location = parsed["results"][0]["geometry"]["location"]
-      @geocode = "#{location["lat"]},#{location["lng"]}"
+      # TODO
     end
 
     def ask_the_google(uri)
