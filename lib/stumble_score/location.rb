@@ -66,7 +66,13 @@ module StumbleScore
       request              = Net::HTTP::Get.new(uri.request_uri)
       response             = session.request(request)
       json                 = response.body
-      JSON.parse(json)
+      parsed               = JSON.parse(json)
+
+      if parsed["status"] == "OVER_QUERY_LIMIT"
+        raise "over Google API query limit; wait or get a new GOOGLE_KEY"
+      end
+
+      parsed
     end
 
   end
