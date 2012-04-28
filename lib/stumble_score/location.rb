@@ -15,6 +15,10 @@ module StumbleScore
       # TODO
     end
 
+    def bar_count
+      # TODO
+    end
+
     def score
       0
     end
@@ -24,10 +28,6 @@ module StumbleScore
     end
 
     def bar_names
-      # TODO
-    end
-
-    def bar_count
       # TODO
     end
 
