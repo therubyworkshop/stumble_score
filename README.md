@@ -8,8 +8,6 @@ Google Keys
 
     AIzaSyDR7kyOHOKmbWVXV77JH1riDFe3EL67ntY
 
-    AIzaSyCDSMOFAhXfuZvvK8Z2uEzovnbOgsh8iBI
-
     AIzaSyC5gss4v7v1MUCu4RyEWWXigta_vitTwz8
 
 
