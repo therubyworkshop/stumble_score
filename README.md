@@ -32,7 +32,6 @@
 
 # TODO
 
-+ Memoize
 + Stub Net::HTTP
 + Code comments
 + Extra credit: Display google's location name
