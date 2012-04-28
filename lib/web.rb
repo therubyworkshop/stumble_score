@@ -28,7 +28,7 @@ get '/' do
     <head></head>
     <body>
       <h1>Welcome to StumbleScore!</h1>
-      <p>An address parameter is required</p>
+      <p>An address parameter is required e.g. http://www.stumblescore.com?address=rittenhouse%20square,%20pa</p>
     </body>
     </html>"
   end
