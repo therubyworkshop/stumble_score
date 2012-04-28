@@ -1,7 +1,5 @@
 .bundle
 .rvmrc
-Gemfile
-Gemfile.lock
 *.DS_Store
 *.swp
 !.keep
