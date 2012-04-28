@@ -24,7 +24,14 @@ module StumbleScore
     end
 
     def classification
-      # TODO
+      case self.score.to_i
+      when 0..33
+        "Dry"
+      when 34..66
+        "Tipsy"
+      when 67..100
+        "Sloppy"
+      end
     end
 
     def bar_names
