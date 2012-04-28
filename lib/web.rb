@@ -8,7 +8,7 @@ get '/' do
   <html>
   <head></head>
   <body>
-    <h1>Hello from the Web Interface</h1>
+    <h1>Welcome to StumbleScore!</h1>
   </body>
   </html>"
 end
