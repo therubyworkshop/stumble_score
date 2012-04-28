@@ -9,6 +9,7 @@ get '/' do
     bar_count       = location.bar_count
     classification  = location.classification
     score           = location.score
+    bar_names       = location.bar_names
     "<!doctype html>
     <html>
     <head></head>
@@ -16,6 +17,7 @@ get '/' do
       <h1>Welcome to StumbleScore!</h1>
       <p>Calculating stumble score for #{address}.</p>
       <p>Bar count: #{bar_count}</p>
+      <p>Bars nearby: #{bar_names}</p>
       <p>Classified as: #{classification}</p>
       <p>StumbleScore: #{location.score}</p>
     </body>
